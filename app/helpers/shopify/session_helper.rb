@@ -1,0 +1,2 @@
+module Shopify::SessionHelper
+end

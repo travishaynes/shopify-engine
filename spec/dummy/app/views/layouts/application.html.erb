@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% flash.each do |name, msg| %>
+<%= content_tag :div, msg, id: "flash_#{name}" %>
+<% end %>
+
+<ul>
+  <% if current_shop.nil? %>
+    <li><%= link_to "Login", shopify_login_path %></li>
+  <% else %>
+    <li><%= link_to "Logout", shopify_logout_path %></li>
+  <% end %>
+</ul>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+<%= form_for :shop, :url => shopify_authenticate_path, :method => :get do %>
+  <%= label_tag :shop, "Enter your store's URL or .myshopify.com domain:" %>
+  <%= text_field_tag :shop %>
+  <%= submit_tag "Login" %>
+<% end %>
